@@ -360,12 +360,9 @@ footer i{
     div.navbar{
         position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
+        display: flex;
         width: 100%;
-        padding: 10px 0;
-        height: 40px;
+        height: fit-content;
         background: rgba(48, 15, 53, 0.397);
         text-align: center;
         z-index: 1;        
@@ -374,10 +371,12 @@ footer i{
         display: none;
     }
     
+
     .navbar div a{
         text-decoration: none;
         color: #b9b0c9;
-        margin: 5%; 
+        margin: 0;
+        padding: 10px 0; 
         text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
     }
     
@@ -385,12 +384,13 @@ footer i{
         display: inline;
         width: 100%;
         height: 35px;
+        flex: 1fr;
     }
     
     .grid-container{
         display: grid;
         grid-template-rows: 10%, 90%;
-        grid-template-columns: unset;
+        grid-template-columns: 1fr;
     } 
     
     div#home-link{
