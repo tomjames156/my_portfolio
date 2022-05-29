@@ -1,0 +1,458 @@
+/* Global Styling */
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2.5em;
+}
+
+h3{
+    font-size: 2.17em;
+}
+
+h4{
+    font-size: 2em;
+}
+
+h5{
+    font-size: 1.83em;
+}
+
+h6{
+    font-size: 1.67em;
+}
+
+a{
+    font-size: 0.83em;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    background: rgb(48, 15, 53);
+    color: white;
+}
+
+
+
+
+/* Creating the division of the page */
+.grid-container{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+
+
+/* Navigation  */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15%;
+    height: auto;
+    background: #4b4062;
+}
+
+img#my_pic{
+    width: 100%;
+    height: auto;
+    opacity: 40%;
+}
+
+.navbar div a{
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
+    background-image: src("images/face.jpg");
+}
+
+.navbar div{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    align-items: center;
+}
+
+div#home-link{
+    background: rgb(48, 15, 53);
+}
+
+.navbar div:hover{
+    background: rgb(48, 15, 53);
+}
+
+
+
+
+/* Content of the page*/
+#main{
+    margin-top: 50px;
+}
+
+
+
+
+/* Home Section */
+.home-text{
+    text-align: center;
+}
+
+img#my_pic_big{
+    display: block;
+   border-radius: 10%;
+   margin-top: 30px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%; 
+   height: auto;
+   margin-bottom: 10%;
+}
+
+
+
+
+/* About Section */
+#about{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+.skill-text{
+    letter-spacing: 5px;
+}
+
+.pastel-text{
+    color: #b9b0c9;
+}
+
+/* Progress bars */
+progress{
+    width: 100%;
+    height: 20px;
+    border-radius: 0;
+    border: none;
+}
+
+progress::-webkit-progress-value{
+    background: #665786;
+}
+
+progress::-webkit-progress-bar{
+    background: white;
+}
+
+progress::-moz-progress-bar{
+    background: #665786;
+}
+
+/* My statistics */
+div.stats{
+    width: 100%;
+    height: 150px;
+    background: #f1f1f1;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    margin: 5% 0;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.digits{
+    font-size: 1.83em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+button.resume{
+    width: 200px;
+    height: 50px;
+    background: #f1f1f1;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px white;
+    font-size: 1em;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+button.resume:hover{
+    background: #c6bcd8;
+}
+
+.resume i{
+    margin-right: 3px;
+}
+
+/* Plans and Prices  */
+div.plans{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.plans div{
+    width: 48%;
+    height: auto;
+    background: #b9b0c9;
+    text-align: center;
+}
+
+div.plans p.offer{
+    color: black;
+}
+
+div.plans h6{
+    margin: 0 auto;
+    padding: 25px 0; 
+    background: #4b4062;
+}
+
+div.plans span h5{
+    color: black;
+}
+
+div.plans span p{
+    color: rgb(68, 67, 67);
+}
+
+button.plans{
+    width: 100px;
+    height: 50px;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    background: #f1f1f1;
+    margin: 15px 0;
+    border: none;
+}
+
+div.plans div:hover{
+    filter: brightness(125%)
+}
+
+hr{
+    margin-bottom: 0;
+}
+
+button.plans:hover{
+    color: white;
+    background: black;
+}
+
+/* Reputation */
+img.vouching{
+    float: left;
+    clear: both;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    margin-right: 10px;
+}
+
+
+
+/* Project Section */
+div#projects{
+    width: 95%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container img{
+    width: 300px;
+    filter: blur(3px);
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 5px rgb(38, 12, 43);
+}
+
+
+.image-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* Contact Section */
+#contact{
+    width: 95%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.contact i{
+    display: inline;
+    margin-right: 20px;
+}
+div.contact{
+    display: flex;
+    margin: 10px;
+}
+
+#contact input{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#contact button.send{
+    width: 200px;
+    height: 50px;
+    background: #f1f1f1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+}
+
+#contact button i{
+    margin-right: 5px;
+}
+
+#contact button:hover{
+    background: #c6bcd8;
+}
+
+
+
+
+/* Footer */
+footer{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+}
+
+footer i{
+    font-size: 1.35em ;
+    margin-left: 3px;
+}
+
+
+
+/* Responsive for mobile device */
+
+@media only screen and (max-width: 601px){
+    div.navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px 0;
+        height: 40px;
+        background: rgba(48, 15, 53, 0.397);
+        text-align: center;
+        z-index: 1;        
+    }
+    img#my_pic, .navbar i{
+        display: none;
+    }
+    
+    .navbar div a{
+        text-decoration: none;
+        color: #b9b0c9;
+        margin: 5%; 
+        text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
+    }
+    
+    .navbar div{
+        display: inline;
+        width: 100%;
+        height: 35px;
+    }
+    
+    .grid-container{
+        display: grid;
+        grid-template-rows: 10%, 90%;
+        grid-template-columns: unset;
+    } 
+    
+    div#home-link{
+        background: unset;
+    }
+
+    .navbar div:hover, div#home-link:hover{
+        background: #b9b0c9;
+    }
+
+    .navbar div:hover a{
+        color: black;
+    }
+
+    .navbar:hover{
+        background: rgb(48, 15, 53);
+    }
+
+    div.stats{
+        width: 100%;
+        height: 480px;
+        background: #f1f1f1;
+        color: black;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        margin: 25px 0;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+    }
+
+    .digits p{
+        font-size: 1.67em;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    div.plans{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    div.basic{
+        margin-bottom: 15px;
+    }
+    
+    div.plans div{
+        width: 100%;
+        height: auto;
+        background: #b9b0c9;
+        text-align: center;
+    }
+
+    .image-container img{
+        width: 100%;
+        filter: blur(3px);
+        margin-bottom: 30px;
+        box-shadow: 2px 2px 5px rgb(38, 12, 43);
+    }
+
+}
