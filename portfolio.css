@@ -382,8 +382,6 @@ footer i{
     
     .navbar div{
         display: inline;
-        width: 100%;
-        height: 35px;
         flex: 1fr;
     }
     
