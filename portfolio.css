@@ -382,7 +382,7 @@ footer i{
     
     .navbar div{
         display: inline;
-        flex: 1fr;
+        flex: 25%;
     }
     
     .grid-container{
