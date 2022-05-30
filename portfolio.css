@@ -262,12 +262,11 @@ span .rep{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 img.vouching{
     float: left;
-    clear: both;
+    clear: left;
     width: 90px;
     height: 90px;
     border-radius: 45px;
