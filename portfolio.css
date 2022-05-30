@@ -56,36 +56,36 @@ body{
     left: 0;
     bottom: 0;
     width: 15%;
-    height: auto;
+    height: 100%;
     background: #4b4062;
+    display: block;
 }
 
 img#my_pic{
     width: 100%;
-    height: auto;
+    height: fit-content;
     opacity: 40%;
 }
 
-.navbar div a{
+.navbar a{
     text-decoration: none;
-    color: white;
-    margin: 10px 0;
-    text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
-    background-image: src("images/face.jpg");
-}
-
-.navbar div{
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
-    align-items: center;
+    row-gap: 10px;
+    text-align: center;
+    padding: 13px 0;
+    text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 0;
 }
 
-div#home-link{
+#home-link{
     background: rgb(48, 15, 53);
 }
 
-.navbar div:hover{
+.navbar a:hover{
     background: rgb(48, 15, 53);
 }
 
@@ -188,6 +188,7 @@ button.resume{
     font-size: 1em;
     border: none;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
 }
 
 button.resume:hover{
@@ -240,6 +241,7 @@ button.plans{
     background: #f1f1f1;
     margin: 15px 0;
     border: none;
+    cursor: pointer;
 }
 
 div.plans div:hover{
@@ -256,9 +258,14 @@ button.plans:hover{
 }
 
 /* Reputation */
+span .rep{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 img.vouching{
     float: left;
-    clear: both;
     width: 90px;
     height: 90px;
     border-radius: 45px;
@@ -275,21 +282,23 @@ div#projects{
     margin-right: auto;
 }
 
+.image-container{
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+}
+
 .image-container img{
-    width: 300px;
+    width: 100%;
+    height: auto;
     filter: blur(3px);
-    margin-bottom: 30px;
     box-shadow: 2px 2px 5px rgb(38, 12, 43);
 }
 
 
-.image-container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
 
 
 
@@ -302,19 +311,19 @@ div#projects{
     margin-right: auto;
 }
 
-div.contact i{
-    display: inline;
-    margin-right: 20px;
-}
 div.contact{
     display: flex;
+    column-gap: 20px;
     margin: 10px;
+    align-items: center;
 }
 
 #contact input{
     width: 100%;
     margin-bottom: 20px;
     height: 50px;
+    padding-left: 10px;
+    font-size: 0.95em;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -326,6 +335,7 @@ div.contact{
     font-size: 1em;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 #contact button i{
@@ -357,6 +367,12 @@ footer i{
 /* Responsive for mobile device */
 
 @media only screen and (max-width: 601px){
+    .grid-container{
+        display: grid;
+        grid-template-rows: 10%, 90%;
+        grid-template-columns: 1fr;
+    } 
+
     div.navbar{
         position: fixed;
         top: 0;
@@ -367,35 +383,26 @@ footer i{
         text-align: center;
         z-index: 1;        
     }
+
     img#my_pic, .navbar i{
         display: none;
     }
     
 
-    .navbar div a{
+    .navbar a{
         text-decoration: none;
         color: #b9b0c9;
         margin: 0;
         padding: 10px 0; 
         text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
-    }
-    
-    .navbar div{
-        display: inline;
         flex: 25%;
     }
     
-    .grid-container{
-        display: grid;
-        grid-template-rows: 10%, 90%;
-        grid-template-columns: 1fr;
-    } 
-    
-    div#home-link{
+    #home-link{
         background: unset;
     }
 
-    .navbar div:hover, div#home-link:hover{
+    .navbar a:hover, #home-link:hover{
         background: #b9b0c9;
     }
 
@@ -451,6 +458,15 @@ footer i{
         filter: blur(3px);
         margin-bottom: 30px;
         box-shadow: 2px 2px 5px rgb(38, 12, 43);
+    }
+
+    .image-container{
+        max-width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        justify-content: center;
     }
 
 }
