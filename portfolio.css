@@ -258,18 +258,30 @@ button.plans:hover{
 }
 
 /* Reputation */
-span .rep{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+span.rep{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 30px 30px;
+    grid-template-areas: 
+    'image text1'
+    'image text2'
+    ;
+    margin-bottom: 20px;
+}
+
+span.rep p:nth-of-type(1){
+    grid-area: text1;
+}
+
+span.rep p:nth-of-type(2){
+    grid-area: text2;
 }
 
 img.vouching{
-    float: left;
     width: 90px;
     height: 90px;
     border-radius: 45px;
-    margin-right: 10px;
+    /* margin:  auto 10px auto 0; */
 }
 
 
