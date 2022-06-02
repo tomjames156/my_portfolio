@@ -504,6 +504,10 @@ footer i{
     span.rep p:nth-of-type(2){
         grid-area: text2;
     }
+
+    span.rep:nth-of-type(2){
+        margin-bottom: 80px;
+    }
     
     img.vouching{
         float: left;
@@ -525,6 +529,10 @@ footer i{
         'image text1'
         'image text2'
         ;
+    }
+
+    span.rep:nth-of-type(2){
+        margin-bottom: 80px;
     }
     
     span.rep p:nth-of-type(1){
@@ -550,5 +558,9 @@ footer i{
     span.rep{
         grid-template-columns: 35% 65%;
         grid-template-rows: 60px 35px;
+    }
+
+    span.rep:nth-of-type(2){
+        margin-bottom: 80px;
     }
 }
