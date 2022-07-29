@@ -134,6 +134,14 @@ img#my_pic_big{
         letter-spacing: 5px;
     }
 
+    .technologies{
+        color: lighten(#c6bcd8, 10);
+        font: {
+            size: 1.3rem;
+            weight: bold;
+        }
+    }
+
     .pastel-text{
         color: #b9b0c9;
     }   
@@ -154,7 +162,64 @@ img#my_pic_big{
             color: hotpink;            
         }
     }
+
+    div.tech-container{
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            row-gap: 0.5rem;
+
+            li{
+                font: {
+                    weight: bold;
+                    size: 1.2rem;
+                }
+            }
+
+            .good{
+                color: #f1f1f1;
+            }
+
+            .okay{
+                color:#b9b0c9
+            }
+
+            .dabbled{
+                color: #665786;
+            }
+        }
+    }
     
+    .key{
+        display: flex;
+        column-gap: 2rem;
+        text-align: right;
+
+        div{
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+
+            .good{
+                width: 20px;
+                height: 20px;
+                background: #f1f1f1;
+                display: flex
+            }
+            
+            .okay{
+                @extend .good;
+                background: #b9b0c9;
+            }
+
+            .dabbled{
+                @extend .good;
+                background: #665786;
+            }
+        }
+    }
 }
 
 /* Progress bars */
