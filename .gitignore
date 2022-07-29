@@ -1,3 +1,5 @@
 node_modules/
 
-public/
+public/images
+public/sass
+public/index.html
