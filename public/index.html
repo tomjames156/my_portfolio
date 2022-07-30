@@ -247,11 +247,13 @@
 
                 <p>Let's get in touch. Send me a message</p>
                 
-                <input type="text" placeholder="Name" name="name" id="name">
-                <input type="text" placeholder="Email" name="e-mail" id="e-mail">
-                <input type="text" placeholder="Subject" name="subject" id="subject">
-                <input type="text" placeholder="Message" name="message" id="message">
-                <button class="send"><i class="fa-solid fa-paper-plane"></i>SUBMIT MESSAGE</button>
+                <form action="#">
+                    <input type="text" placeholder="Name" name="name" id="name" required>
+                    <input type="text" placeholder="Email" name="e-mail" id="e-mail">
+                    <input type="text" placeholder="Subject" name="subject" id="subject">
+                    <input type="text" placeholder="Message" name="message" id="message">
+                    <a onclick="tryFunc(this)" class="send"><i class="fa-solid fa-paper-plane"></i>SUBMIT MESSAGE</a>
+                </form>
 
             </div><br>
 
@@ -269,7 +271,7 @@
 
     </div>
     
-    
+<script src="portfolio.js"></script>
 </body>
 
 </html>
