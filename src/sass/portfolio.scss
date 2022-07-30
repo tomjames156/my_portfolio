@@ -192,31 +192,62 @@ img#my_pic_big{
         }
     }
     
-    .key{
+    .color-desc{
         display: flex;
-        column-gap: 2rem;
+        flex-direction: column;
         text-align: right;
 
-        div{
+        > p{
+            font: {
+                size: 1.1rem;
+                weight: bold;
+            }
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .key{
             display: flex;
-            align-items: center;
-            column-gap: 0.5rem;
-
-            .good{
-                width: 20px;
-                height: 20px;
-                background: #f1f1f1;
-                display: flex
-            }
+            column-gap: 2rem;
+            justify-content: right;
             
-            .okay{
-                @extend .good;
-                background: #b9b0c9;
-            }
-
-            .dabbled{
-                @extend .good;
-                background: #665786;
+    
+            div{
+                display: flex;
+                align-items: center;
+                column-gap: 0.5rem;
+    
+                .good{
+                    width: 20px;
+                    height: 20px;
+                    background: #f1f1f1;
+                    display: flex;  
+                }
+                
+                .okay{
+                    @extend .good;
+                    background: #b9b0c9;
+                }
+    
+                .dabbled{
+                    @extend .good;
+                    background: #665786;
+                }
+    
+                .good-text{
+                    color: #f1f1f1;
+                    font-weight: bold;
+                }
+    
+                .okay-text{
+                    @extend .good-text;
+                    color: #b9b0c9;
+                }
+    
+                .dabbled-text{
+                    @extend .good-text;
+                    color: #665786;
+                }
             }
         }
     }
@@ -350,6 +381,10 @@ span.rep{
     'image text2'
     ;
     margin-bottom: 50px;
+
+    span{
+        font-weight: bold;
+    }
 }
 
 span.rep:nth-of-type(2){
@@ -380,6 +415,25 @@ div#projects{
     height: auto;
     margin-left: auto;
     margin-right: auto;
+
+    p{
+        font: {
+            size: 1.1rem;
+            weight: bold;
+        }
+        
+        a{
+            color: #b9b0c9;
+            font: {
+                size: 1.1rem;
+                weight: bold;
+            }
+        }
+
+        a:hover{
+            color: hotpink;            
+        }
+    }
 }
 
 .image-container{
@@ -460,6 +514,20 @@ footer{
         font-size: 1.35em ;
         margin-left: 3px;
     }
+
+    p{
+        a{  
+            color: #f1f1f1;
+            font: {
+                size: 1.1rem;
+                // weight: bold;
+            }
+        }
+
+        a:hover{
+            color: hotpink;            
+        }
+    }
 }
 
 
@@ -473,7 +541,7 @@ footer{
         grid-template-columns: 1fr;
     } 
 
-    div.navbar{
+    .navbar{
         position: fixed;
         top: 0;
         display: flex;
@@ -481,7 +549,11 @@ footer{
         height: fit-content;
         background: rgba(48, 15, 53, 0.397);
         text-align: center;
-        z-index: 1;        
+        z-index: 1;    
+
+        #home-link{
+            background: unset;
+        }    
     }
 
     img#my_pic, .navbar i{
@@ -491,15 +563,11 @@ footer{
 
     .navbar a{
         text-decoration: none;
-        color: #b9b0c9;
+        color: white;
         margin: 0;
         padding: 10px 0; 
         text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
         flex: 25%;
-    }
-    
-    #home-link{
-        background: unset;
     }
 
     .navbar a:hover, #home-link:hover{

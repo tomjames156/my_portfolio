@@ -144,7 +144,7 @@ img#my_pic_big {
   font-weight: bold;
   font-size: 1.2rem;
 }
-#about div.tech-container ul .good, #about .key div.tech-container ul .dabbled, #about .key div.tech-container ul .okay {
+#about div.tech-container ul .good, #about .color-desc .key div.tech-container ul .dabbled, #about .color-desc .key div.tech-container ul .okay {
   color: #f1f1f1;
 }
 #about div.tech-container ul .okay {
@@ -153,27 +153,48 @@ img#my_pic_big {
 #about div.tech-container ul .dabbled {
   color: #665786;
 }
-#about .key {
+#about .color-desc {
   display: flex;
-  column-gap: 2rem;
+  flex-direction: column;
   text-align: right;
 }
-#about .key div {
+#about .color-desc > p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+#about .color-desc .key {
+  display: flex;
+  column-gap: 2rem;
+  justify-content: right;
+}
+#about .color-desc .key div {
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
 }
-#about .key div .good, #about .key div .dabbled, #about .key div .okay {
+#about .color-desc .key div .good, #about .color-desc .key div .dabbled, #about .color-desc .key div .okay {
   width: 20px;
   height: 20px;
   background: #f1f1f1;
   display: flex;
 }
-#about .key div .okay {
+#about .color-desc .key div .okay {
   background: #b9b0c9;
 }
-#about .key div .dabbled {
+#about .color-desc .key div .dabbled {
   background: #665786;
+}
+#about .color-desc .key div .good-text, #about .color-desc .key div .dabbled-text, #about .color-desc .key div .okay-text {
+  color: #f1f1f1;
+  font-weight: bold;
+}
+#about .color-desc .key div .okay-text {
+  color: #b9b0c9;
+}
+#about .color-desc .key div .dabbled-text {
+  color: #665786;
 }
 
 /* Progress bars */
@@ -301,6 +322,9 @@ span.rep {
   grid-template-areas: "image text1" "image text2";
   margin-bottom: 50px;
 }
+span.rep span {
+  font-weight: bold;
+}
 
 span.rep:nth-of-type(2) {
   margin-bottom: 80px;
@@ -328,6 +352,18 @@ div#projects {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+div#projects p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+div#projects p a {
+  color: #b9b0c9;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+div#projects p a:hover {
+  color: hotpink;
 }
 
 .image-container {
@@ -395,6 +431,13 @@ footer i {
   font-size: 1.35em;
   margin-left: 3px;
 }
+footer p a {
+  color: #f1f1f1;
+  font-size: 1.1rem;
+}
+footer p a:hover {
+  color: hotpink;
+}
 
 /* Responsive for mobile device */
 @media only screen and (max-width: 601px) {
@@ -403,7 +446,7 @@ footer i {
     grid-template-rows: 10%, 90%;
     grid-template-columns: 1fr;
   }
-  div.navbar {
+  .navbar {
     position: fixed;
     top: 0;
     display: flex;
@@ -413,19 +456,19 @@ footer i {
     text-align: center;
     z-index: 1;
   }
+  .navbar #home-link {
+    background: unset;
+  }
   img#my_pic, .navbar i {
     display: none;
   }
   .navbar a {
     text-decoration: none;
-    color: #b9b0c9;
+    color: white;
     margin: 0;
     padding: 10px 0;
     text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
     flex: 25%;
-  }
-  #home-link {
-    background: unset;
   }
   .navbar a:hover, #home-link:hover {
     background: #b9b0c9;
