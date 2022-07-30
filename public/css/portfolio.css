@@ -374,12 +374,25 @@ div#projects p a:hover {
   gap: 20px;
   justify-content: center;
 }
-
-.image-container img {
+.image-container > div {
+  position: relative;
+}
+.image-container > div > div {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  padding: 0.5rem;
+  z-index: 1;
+  background: rgb(48, 15, 53);
+}
+.image-container > div img {
   width: 100%;
   height: auto;
   filter: blur(3px);
   box-shadow: 2px 2px 5px rgb(38, 12, 43);
+}
+.image-container > div img:hover {
+  filter: grayscale(0);
 }
 
 /* Contact Section */
@@ -412,6 +425,7 @@ div#projects p a:hover {
   border: none;
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 #contact a.send i {
   margin-right: 5px;
