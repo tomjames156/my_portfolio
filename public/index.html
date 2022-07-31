@@ -26,18 +26,20 @@
         <header>
             <div class="navbar">
                 <img src="images/face.jpg" id="my_pic" alt="my_picture">
-                <a href="#home" id="home-link">
-                    <i class="fa-solid fa-house-chimney fa-2x"></i>                    
-                HOME</a>
-                <a href="#about">
-                    <i class="fa-solid fa-user fa-2x"></i>
-                ABOUT</a>
-                <a href="#projects">
-                <i class="fa-solid fa-eye fa-2x"></i>
-                PROJECTS</a> 
-                <a href="#contact">
-                <i class="fa-solid fa-envelope fa-2x"></i>
-                CONTACT</a>
+                <div class="links">
+                    <a href="#home" id="home-link">
+                        <i class="fa-solid fa-house-chimney fa-2x"></i>                    
+                    HOME</a>
+                    <a href="#about">
+                        <i class="fa-solid fa-user fa-2x"></i>
+                    ABOUT</a>
+                    <a href="#projects">
+                    <i class="fa-solid fa-eye fa-2x"></i>
+                    PROJECTS</a> 
+                    <a href="#contact">
+                    <i class="fa-solid fa-envelope fa-2x"></i>
+                    CONTACT</a>
+                </div>
             </div>
         </header>
 
@@ -86,15 +88,6 @@
 
                 <p class="technologies">Technologies I've worked with:</p>
 
-                <!-- <p class="skill-text pastel-text">Calculus Skills</p>
-                <progress value="80" max="100"></progress>
-
-                <p class="skill-text pastel-text">Web Development Skills</p>
-                <progress value="85" max="100"></progress>
-
-                <p class="skill-text pastel-text">Mechanical Design Skills</p>
-                <progress value="70" max="100"></progress> -->
-
                 <div class="tech-container">
                     <ul>
                         <li class="good">HTML</li>
@@ -102,7 +95,7 @@
                         <li class="okay">Javascript</li>
                         <li class="dabbled">Python</li>
                         <li class="dabbled">Tailwind CSS</li>
-                        <li class="okay">SASS</li>
+                        <li class="okay">Sass</li>
                     </ul>
                 </div>
 
@@ -149,53 +142,6 @@
                 </div>
 
                 <button class="resume"><i class="fa-solid fa-download"></i>Download Resume</button>
-
-                <!-- <h5>My Prices</h5>
-
-                <div class="plans">
-
-                    <div class="basic">
-
-                        <h6>Basic</h6>
-                        <p class="offer">Web Design</p>
-                        <hr>
-                        <p class="offer">Calculus Tutorials</p>
-                        <hr>
-                        <p class="offer">AUTOCAD drawing</p>
-                        <hr>
-                        <p class="offer">Mail Support</p>
-                        <hr>
-                        <span>
-                            <h5>10$</h5>
-                            <p>per month</p>
-                        </span>
-                        <hr>
-                        <button class="plans">Sign Up</button>
-                        
-
-                    </div>
-    
-                    <div class="pro">
-
-                        <h6>Pro</h6>
-                        <p class="offer">Web Design</p>
-                        <hr>
-                        <p class="offer">Advanced Calculus Tutorials</p>
-                        <hr>
-                        <p class="offer">Figma Vector Graphics</p>
-                        <hr>
-                        <p class="offer">Endless Support</p>
-                        <hr>
-                        <span>
-                            <h5>$25</h5>
-                            <p>per month</p>
-                        </span>
-                        <hr>                        
-                        <button class="plans">Sign Up</button>
-
-                    </div>
-
-                </div> -->
 
                 <h5>My Reputation</h5>
                 
@@ -278,12 +224,11 @@
 
                 <p>Let's get in touch. Send me a message</p>
                 
-                <form action="#">
-                    <input type="text" placeholder="Name" name="name" id="name" required>
-                    <input type="text" placeholder="Email" name="e-mail" id="e-mail">
+                <form action="index.html">
+                    <input type="text" placeholder="Name" name="name" id="name">
                     <input type="text" placeholder="Subject" name="subject" id="subject">
                     <input type="text" placeholder="Message" name="message" id="message">
-                    <a onclick="tryFunc()" class="send"><i class="fa-solid fa-paper-plane"></i>SUBMIT MESSAGE</a>
+                    <a onclick="sendMessage()" class="send"><i class="fa-solid fa-paper-plane"></i>SUBMIT MESSAGE</a>
                 </form>
 
             </div><br>

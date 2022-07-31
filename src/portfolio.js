@@ -2,7 +2,7 @@ let sendBtn = document.querySelector("a.send");
 let formElements = document.querySelectorAll("form > input");
 const myEmail = "tomjames156@gmail.com";
 
-function tryFunc(){
+function sendMessage(){
     let current_status = true;
 
     let emailSubject = document.querySelector("input#subject").value;
@@ -18,11 +18,11 @@ function tryFunc(){
 
     if(current_status){
         console.log(emailSubject);
-        sendEmail(emailSubject, emailBody);
+        addEmail(emailSubject, emailBody);
     }
 }
 
-function sendEmail(subject, body){
+function addEmail(subject, body){
     sendBtn.setAttribute("href", `mailto:${myEmail}?subject=${separateCharacters(subject)}&body=${separateCharacters(body)}`);
 }
 
@@ -36,6 +36,3 @@ function separateCharacters(sentence){
 
     return new_sentence;
 }
-
-// console.log(separateCharacters(sendersName));
-
