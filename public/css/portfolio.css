@@ -219,6 +219,7 @@ div.stats .digits {
   background: #ffad0a;
   font-weight: bold;
   font-size: 1em;
+  text-decoration: none;
   color: black;
   border: none;
   border-radius: 15px;
@@ -244,18 +245,16 @@ span.rep {
 span.rep span {
   font-weight: bold;
 }
-
-span.rep:nth-of-type(2) {
-  margin-bottom: 80px;
-}
-
 span.rep p:nth-of-type(1) {
   grid-area: text1;
   align-self: flex-start;
 }
-
 span.rep p:nth-of-type(2) {
   grid-area: text2;
+}
+
+span.rep:nth-of-type(2) {
+  margin-bottom: 80px;
 }
 
 img.vouching {
@@ -273,13 +272,11 @@ img.vouching {
   margin-right: auto;
 }
 #projects p {
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 #projects p a {
-  color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
+  color: aliceblue;
+  font-size: 1.2rem;
 }
 #projects p a:hover {
   color: #ffc44d;
@@ -320,6 +317,7 @@ img.vouching {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+  color: aliceblue;
 }
 #contact div.contact {
   display: flex;
@@ -442,7 +440,7 @@ footer p a:hover {
   span.rep p:nth-of-type(1) {
     grid-area: text1;
   }
-  span.rep p:nth-of-type(2) {
+  span.rep span.rep p:nth-of-type(2) {
     grid-area: text2;
   }
   span.rep:nth-of-type(2) {
@@ -462,9 +460,6 @@ footer p a:hover {
     grid-template-rows: 40px 30px;
     grid-template-areas: "image text1" "image text2";
   }
-  span.rep:nth-of-type(2) {
-    margin-bottom: 80px;
-  }
   span.rep p:nth-of-type(1) {
     grid-area: text1;
     align-self: flex-start;
@@ -472,6 +467,9 @@ footer p a:hover {
   span.rep p:nth-of-type(2) {
     grid-area: text2;
     align-self: flex-start;
+  }
+  span.rep:nth-of-type(2) {
+    margin-bottom: 80px;
   }
   img.vouching {
     width: 80px;

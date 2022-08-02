@@ -281,6 +281,7 @@ div.stats{
     background: $btn_colour;
     font-weight: bold;
     font-size: 1em;
+    text-decoration: none;
     color: black;
     border: none;
     border-radius: 15px;
@@ -312,19 +313,19 @@ span.rep{
     span{
         font-weight: bold;
     }
+
+    p:nth-of-type(1){
+        grid-area: text1;
+        align-self: flex-start;
+    }
+
+    p:nth-of-type(2){
+        grid-area: text2;
+    }
 }
 
 span.rep:nth-of-type(2){
     margin-bottom: 80px;
-}
-
-span.rep p:nth-of-type(1){
-    grid-area: text1;
-    align-self: flex-start;
-}
-
-span.rep p:nth-of-type(2){
-    grid-area: text2;
 }
 
 img.vouching{
@@ -345,15 +346,13 @@ img.vouching{
 
     p{
         font: {
-            size: 1.1rem;
-            weight: bold;
+            size: 1.2rem;
         }
         
         a{
-            color: white;
+            color: $secondary_text_color;
             font: {
-                size: 1.1rem;
-                weight: bold;
+                size: 1.2rem;
             }
         }
 
@@ -408,6 +407,7 @@ img.vouching{
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    color: $secondary_text_color;
 
     div.contact{
         display: flex;
@@ -548,12 +548,11 @@ footer{
 
     .image-container{
         grid-template-columns: 1fr;
-    }
-
-    .image-container img{
-        width: 100%;
-        filter: blur(3px);
-        margin-bottom: 30px;
+        img{
+            width: 100%;
+            filter: blur(3px);
+            margin-bottom: 30px;
+        }
     }
 
     span.rep{
@@ -565,16 +564,16 @@ footer{
         'image text2'
         ;
         margin-bottom: 20px;
-    }
-    
-    span.rep p:nth-of-type(1){
-        grid-area: text1;
-    }
-    
-    span.rep p:nth-of-type(2){
-        grid-area: text2;
-    }
 
+        p:nth-of-type(1){
+            grid-area: text1;
+        }
+
+        span.rep p:nth-of-type(2){
+            grid-area: text2;
+        }
+    }
+    
     span.rep:nth-of-type(2){
         margin-bottom: 80px;
     }
@@ -599,20 +598,20 @@ footer{
         'image text1'
         'image text2'
         ;
+
+        p:nth-of-type(1){
+            grid-area: text1;
+            align-self: flex-start;
+        }
+
+        p:nth-of-type(2){
+            grid-area: text2;
+            align-self: flex-start;
+        }
     }
 
     span.rep:nth-of-type(2){
         margin-bottom: 80px;
-    }
-    
-    span.rep p:nth-of-type(1){
-        grid-area: text1;
-        align-self: flex-start;
-    }
-    
-    span.rep p:nth-of-type(2){
-        grid-area: text2;
-        align-self: flex-start;
     }
     
     img.vouching{
