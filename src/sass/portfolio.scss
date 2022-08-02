@@ -1,5 +1,7 @@
 /* Global Styling */
 
+@import "_variables";
+
 *{
     box-sizing: border-box;
 }
@@ -34,7 +36,8 @@ a{
 
 body{
     font-family: "Montserrat", sans-serif;
-    background: rgb(48, 15, 53);
+    // background: rgb(48, 15, 53);
+    background: $primary_bg;
     color: white;
 }
 
@@ -57,13 +60,13 @@ body{
     bottom: 0;
     width: 15%;
     height: 100%;
-    background: #4b4062;
+    background: $secondary_bg;
     display: block;
 
     img#my_pic{
         width: 100%;
         height: fit-content;
-        opacity: 40%;
+        opacity: 60%;
     }
 
     div.links{
@@ -72,23 +75,23 @@ body{
 
     a{
         text-decoration: none;
-        color: #ffffff;
+        color: white;
         display: flex;
         flex-direction: column;
         row-gap: 10px;
         text-align: center;
         padding: 13px 0;
-        text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
+        text-shadow:  1px 2px 3px $primary_bg;
         cursor: pointer;
         font-size: 1em;
     }
 
     #home-link{
-        background: rgb(48, 15, 53);
+        background: $primary_bg;
     }
 
     a:hover{
-        background: rgb(48, 15, 53);
+        background: $primary_bg;
     }
     
 }
@@ -110,13 +113,13 @@ body{
 
 img#my_pic_big{
     display: block;
-    border-radius: 10%;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     width: 50%; 
     height: auto;
     margin-bottom: 10%;
+    border-radius: 0 0 20% 20%;
 }
 
 
@@ -138,31 +141,26 @@ img#my_pic_big{
     }
 
     .technologies{
-        color: lighten(#c6bcd8, 10);
+        color: $secondary_text_color;
         font: {
             size: 1.3rem;
             weight: bold;
         }
     }
-
-    .pastel-text{
-        color: #b9b0c9;
-    }   
     
     .about-me{
-        color: lighten(#b9b0c9, 10);
+        color: $secondary_text_color;
         text-indent: 50px;
 
         a{
-            color: #b9b0c9;
+            color: white;
             font: {
                 size: 1rem;
-                weight: bold;
             }
         }
 
         a:hover{
-            color: hotpink;            
+            color: $btn_hov_colour;            
         }
     }
 
@@ -182,15 +180,15 @@ img#my_pic_big{
             }
 
             .good{
-                color: #f1f1f1;
+                color: $primary_text_color;
             }
 
             .okay{
-                color:#b9b0c9
+                color: $okay;
             }
 
             .dabbled{
-                color: #665786;
+                color: $dabbled;
             }
         }
     }
@@ -223,65 +221,47 @@ img#my_pic_big{
                 .good{
                     width: 20px;
                     height: 20px;
-                    background: #f1f1f1;
+                    background: $primary_text_color;
                     display: flex;  
                 }
                 
                 .okay{
                     @extend .good;
-                    background: #b9b0c9;
+                    background: $okay;
                 }
     
                 .dabbled{
                     @extend .good;
-                    background: #665786;
+                    background: $dabbled;
                 }
     
                 .good-text{
-                    color: #f1f1f1;
+                    color: white;
                     font-weight: bold;
                 }
     
                 .okay-text{
                     @extend .good-text;
-                    color: #b9b0c9;
+                    color: $okay;
                 }
     
                 .dabbled-text{
                     @extend .good-text;
-                    color: #665786;
+                    color: $dabbled;
                 }
             }
         }
     }
 }
 
-/* Progress bars */
-progress{
-    width: 100%;
-    height: 20px;
-    border-radius: 0;
-    border: none;
-}
 
-progress::-webkit-progress-value{
-    background: #665786;
-}
-
-progress::-webkit-progress-bar{
-    background: white;
-}
-
-progress::-moz-progress-bar{
-    background: #665786;
-}
 
 /* My statistics */
 div.stats{
     width: 100%;
     height: 150px;
-    background: #f1f1f1;
-    color: black;
+    background: $cta_bg;
+    color: $btn_text;
     font-weight: 600;
     display: flex;
     margin: 5% 0;
@@ -296,83 +276,27 @@ div.stats{
     }
 }
 
-button.resume{
-    width: 200px;
-    height: 50px;
-    background: #f1f1f1;
+.resume{
+    padding: 10px;
+    background: $btn_colour;
     font-weight: bold;
-    text-shadow: 1px 1px 2px white;
     font-size: 1em;
+    color: black;
     border: none;
+    border-radius: 15px;
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
+    
+    i{
+        margin-right: 3px;
+    }
 }
 
-button.resume:hover{
-    background: #c6bcd8;
+.resume:hover{
+    background: $btn_hov_colour;
 }
 
-.resume i{
-    margin-right: 3px;
-}
 
-/* Plans and Prices  */
-div.plans{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-div.plans div{
-    width: 48%;
-    height: auto;
-    background: #b9b0c9;
-    text-align: center;
-}
-
-div.plans p.offer{
-    color: black;
-}
-
-div.plans h6{
-    margin: 0 auto;
-    padding: 25px 0; 
-    background: #4b4062;
-}
-
-div.plans span h5{
-    color: black;
-}
-
-div.plans span p{
-    color: rgb(68, 67, 67);
-}
-
-button.plans{
-    width: 100px;
-    height: 50px;
-    font-size: 1em;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bold;
-    background: #f1f1f1;
-    margin: 15px 0;
-    border: none;
-    cursor: pointer;
-}
-
-div.plans div:hover{
-    filter: brightness(125%)
-}
-
-hr{
-    margin-bottom: 0;
-}
-
-button.plans:hover{
-    color: white;
-    background: black;
-}
 
 /* Reputation */
 span.rep{
@@ -413,7 +337,7 @@ img.vouching{
 
 
 /* Project Section */
-div#projects{
+#projects{
     width: 95%;
     height: auto;
     margin-left: auto;
@@ -426,7 +350,7 @@ div#projects{
         }
         
         a{
-            color: #b9b0c9;
+            color: white;
             font: {
                 size: 1.1rem;
                 weight: bold;
@@ -434,7 +358,7 @@ div#projects{
         }
 
         a:hover{
-            color: hotpink;            
+            color: $btn_hov_colour;            
         }
     }
 }
@@ -456,14 +380,14 @@ div#projects{
             top: -5px;
             padding: 0.5rem;
             z-index: 1;
-            background: rgb(48, 15, 53);
+            background: $primary_bg;
         }
 
         img{
             width: 100%;
             height: auto;
             filter: blur(3px);
-            box-shadow: 2px 2px 5px rgb(38, 12, 43);
+            box-shadow: 2px 2px 5px $primary_bg;
         }
 
         img:hover{
@@ -495,31 +419,19 @@ div#projects{
     input{
         width: 100%;
         margin-bottom: 20px;
-        height: 50px;
+        padding: 15px;
         padding-left: 10px;
         font-size: 0.95em;
         font-family: "Montserrat", sans-serif;
     }
 
     a.send{
-        padding: 10px;
-        background: #f1f1f1;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1em;
-        font-weight: bold;
-        border: none;
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
+        @extend .resume;
 
         i{
             margin-right: 5px;
         }
     
-    }
-
-    a:hover{
-        background: #c6bcd8;
     }
     
 }
@@ -533,22 +445,30 @@ footer{
     margin-right: auto;
     margin-top: 70px;
 
-    i{
-        font-size: 1.35em ;
-        margin-left: 3px;
+    a{
+
+        i{
+            font-size: 1.35em ;
+            margin-left: 3px;
+            color: white;
+        }
+    
+        i:hover{
+            color: $btn_colour;
+        }
     }
 
     p{
+        color: $secondary_text_color;
         a{  
-            color: #f1f1f1;
+            color: white;
             font: {
-                size: 1.1rem;
-                // weight: bold;
+                size: 1rem;
             }
         }
 
         a:hover{
-            color: hotpink;            
+            color: $btn_hov_colour;            
         }
     }
 }
@@ -557,7 +477,7 @@ footer{
 
 /* Responsive for mobile device */
 
-@media only screen and (max-width: 601px){
+@media only screen and (max-width: 600px){
     .grid-container{
         display: grid;
         grid-template-rows: 10%, 90%;
@@ -567,7 +487,7 @@ footer{
     .navbar{
         position: fixed;
         top: 0;
-        background: rgba(48, 15, 53, 0.397);
+        background: $primary_bg_transparent;
         text-align: center;
         z-index: 1;  
         display: block;
@@ -594,20 +514,16 @@ footer{
         color: white;
         margin: 0;
         padding: 10px 0; 
-        text-shadow: 1px 1.5px 3px rgb(48, 15, 53);
         flex: 25%;
     }
 
     .navbar a:hover, #home-link:hover{
-        background: #b9b0c9;
-    }
-
-    .navbar div:hover a{
-        color: black;
+        background: $secondary_bg;
+        color: white;
     }
 
     .navbar:hover{
-        background: rgb(48, 15, 53);
+        background: $primary_bg;
     }
 
     div.stats{
@@ -630,39 +546,14 @@ footer{
         margin-bottom: 0;
     }
 
-    div.plans{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    div.basic{
-        margin-bottom: 15px;
-    }
-    
-    div.plans div{
-        width: 100%;
-        height: auto;
-        background: #b9b0c9;
-        text-align: center;
+    .image-container{
+        grid-template-columns: 1fr;
     }
 
     .image-container img{
         width: 100%;
         filter: blur(3px);
         margin-bottom: 30px;
-        box-shadow: 2px 2px 5px rgb(38, 12, 43);
-    }
-
-    .image-container{
-        max-width: 100%; 
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        justify-content: center;
     }
 
     span.rep{
