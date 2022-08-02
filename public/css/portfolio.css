@@ -33,7 +33,7 @@ a {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #245aac;
+  background: #16386B;
   color: white;
 }
 
@@ -51,7 +51,7 @@ body {
   bottom: 0;
   width: 15%;
   height: 100%;
-  background: #4D94FF;
+  background: rgba(98, 150, 227, 0.6274509804);
   display: block;
 }
 .navbar img#my_pic {
@@ -70,15 +70,15 @@ body {
   row-gap: 10px;
   text-align: center;
   padding: 13px 0;
-  text-shadow: 1px 2px 3px #245aac;
+  text-shadow: 1px 2px 3px #16386B;
   cursor: pointer;
   font-size: 1em;
 }
 .navbar #home-link {
-  background: #245aac;
+  background: #16386B;
 }
 .navbar a:hover {
-  background: #245aac;
+  background: #16386B;
 }
 
 /* Content of the page*/
@@ -299,13 +299,13 @@ img.vouching {
   top: -5px;
   padding: 0.5rem;
   z-index: 1;
-  background: #245aac;
+  background: #16386B;
 }
 .image-container > div img {
   width: 100%;
   height: auto;
   filter: blur(3px);
-  box-shadow: 2px 2px 5px #245aac;
+  box-shadow: 2px 2px 5px #16386B;
 }
 .image-container > div img:hover {
   filter: blur(0);
@@ -345,7 +345,7 @@ footer {
   margin-top: 70px;
 }
 footer a i {
-  font-size: 1.35em;
+  font-size: 1.5rem;
   margin-left: 3px;
   color: white;
 }
@@ -373,7 +373,7 @@ footer p a:hover {
   .navbar {
     position: fixed;
     top: 0;
-    background: rgba(26, 65, 123, 0.4509803922);
+    background: rgba(22, 56, 107, 0.5529411765);
     text-align: center;
     z-index: 1;
     display: block;
@@ -394,15 +394,15 @@ footer p a:hover {
     text-decoration: none;
     color: white;
     margin: 0;
-    padding: 10px 0;
+    padding: 12px 0 10px 0;
     flex: 25%;
   }
   .navbar a:hover, #home-link:hover {
-    background: #4D94FF;
+    background: rgba(98, 150, 227, 0.6274509804);
     color: white;
   }
   .navbar:hover {
-    background: #245aac;
+    background: #16386B;
   }
   div.stats {
     width: 100%;
