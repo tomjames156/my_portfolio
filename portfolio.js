@@ -1,6 +1,7 @@
 let sendBtn = document.querySelector("a.send");
 let formElements = document.querySelectorAll("form > input");
 const myEmail = "tomjames156@gmail.com";
+let resumeBtn = document.querySelector("a.resume");
 
 function sendMessage(){
     let current_status = true;
