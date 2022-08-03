@@ -1,11 +1,13 @@
 let sendBtn = document.querySelector("a.send");
 let formElements = document.querySelectorAll("form > input");
 const myEmail = "tomjames156@gmail.com";
-let emailSubject = document.querySelector("input#subject").value;
-let emailBody = document.querySelector("input#message").value;
 
 function sendMessage(){
     let current_status = true;
+
+    let emailSubject = document.querySelector("input#subject").value;
+    let emailBody = document.querySelector("input#message").value;
+
 
     for(let element of formElements){
         if(element.value == ""){
