@@ -3,7 +3,9 @@ let formElements = document.querySelectorAll("form > input");
 const myEmail = "tomjames156@gmail.com";
 let resumeBtn = document.querySelector("a.resume");
 
-function sendMessage(){
+var addEmail, separateCharacters, sendMessage;
+
+sendEmail = () => {
     let current_status = true;
 
     let emailSubject = document.querySelector("input#subject").value;
@@ -24,17 +26,6 @@ function sendMessage(){
     }
 }
 
-function addEmail(subject, body){
-    sendBtn.setAttribute("href", `mailto:${myEmail}?subject=${separateCharacters(subject)}&body=${separateCharacters(body)}`);
-}
+addEmail = (subject, body) => {sendBtn.setAttribute("href", `mailto:${myEmail}?subject=${separateCharacters(subject)}&body=${separateCharacters(body)}`);}
 
-function separateCharacters(sentence){
-    let words = sentence.split(" ");
-    let new_sentence = words[0];
-
-    for(let i = 1; i < words.length; i++){
-        new_sentence += `%20${words[i]}`;
-    }
-
-    return new_sentence;
-}
+separateCharacters = sentence => sentence.split(" ").join("%20");
