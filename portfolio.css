@@ -100,7 +100,7 @@ img#my_pic_big {
   width: 50%;
   height: auto;
   margin-bottom: 10%;
-  border-radius: 0 0 20% 20%;
+  border-radius: 0 0 10% 10%;
 }
 
 /* About Section */
@@ -317,13 +317,18 @@ img.vouching {
   margin: 10px;
   align-items: center;
 }
-#contact input {
+#contact input, #contact textarea {
   width: 100%;
   margin-bottom: 20px;
   padding: 15px;
   padding-left: 10px;
   font-size: 0.95em;
   font-family: "Montserrat", sans-serif;
+}
+#contact #validation-result {
+  color: #ffc44d;
+  display: block;
+  margin-top: -1rem;
 }
 #contact a.send i {
   margin-right: 5px;
