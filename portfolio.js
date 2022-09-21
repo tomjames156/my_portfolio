@@ -1,12 +1,15 @@
 let sendBtn = document.querySelector("a.send");
 const myEmail = "tomjames156@gmail.com";
 const projects = document.querySelectorAll(".hidden-project");
+const stats = document.querySelectorAll(".stat-hidden");
 const validationSpace = document.getElementById("validation-result");
 
+// Send the Email
 function addEmail(subject, body){
     sendBtn.setAttribute("href", `mailto:${myEmail}?subject=${separateCharacters(subject)}&body=${separateCharacters(body)}`);
 }
 
+// Make text into email format
 function separateCharacters(sentence){
     let words = sentence.split(" ");
     let new_sentence = words[0];
@@ -18,6 +21,7 @@ function separateCharacters(sentence){
     return new_sentence;
 }
 
+// Validate the email parameters before sending
 sendBtn.addEventListener('click', () =>{
     let emailParams = [];
     let sendersName = document.getElementById("name").value;
@@ -47,14 +51,26 @@ sendBtn.addEventListener('click', () =>{
     );
 });
 
-const observer = new IntersectionObserver((entries)=> {
+const projectsObserver = new IntersectionObserver((entries)=> {
     entries.forEach((entry) => {
         if(entry.isIntersecting){
-            entry.target.classList.add("show")
+            entry.target.classList.add("show-project")
         }else{
-            entry.target.classList.remove("show")
+            entry.target.classList.remove("show-project")
         }
     })
 })
 
-projects.forEach((project) => {observer.observe(project)});
+projects.forEach((project) => {projectsObserver.observe(project)});
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show-stat");
+        }else{
+            entry.target.classList.remove("show-stat");
+        }
+    })
+});
+
+stats.forEach(stat => statsObserver.observe(stat))
