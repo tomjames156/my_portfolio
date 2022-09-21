@@ -1,5 +1,6 @@
 let sendBtn = document.querySelector("a.send");
 const myEmail = "tomjames156@gmail.com";
+const projects = document.querySelectorAll(".hidden-project");
 const validationSpace = document.getElementById("validation-result");
 
 function addEmail(subject, body){
@@ -45,8 +46,6 @@ sendBtn.addEventListener('click', () =>{
         function(error) {validationSpace.innerHTML = error;}
     );
 });
-
-const projects = document.querySelectorAll(".hidden-project");
 
 const observer = new IntersectionObserver((entries)=> {
     entries.forEach((entry) => {
