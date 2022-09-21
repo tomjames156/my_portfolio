@@ -44,4 +44,18 @@ sendBtn.addEventListener('click', () =>{
         function(value) {addEmail(value[0], value[1]);},
         function(error) {validationSpace.innerHTML = error;}
     );
+});
+
+const projects = document.querySelectorAll(".hidden-project");
+
+const observer = new IntersectionObserver((entries)=> {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show")
+        }else{
+            entry.target.classList.remove("show")
+        }
+    })
 })
+
+projects.forEach((project) => {observer.observe(project)});

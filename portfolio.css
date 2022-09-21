@@ -3,6 +3,37 @@
   box-sizing: border-box;
 }
 
+.hidden-project{
+  opacity: 0;
+  filter: blur(100%);
+  transform: translateY(100%);
+  transition: all 1s;
+}
+
+.hidden-project:nth-of-type(2){
+  transition-delay: 200ms;
+}
+
+.hidden-project:nth-of-type(4){
+  transition-delay: 200ms;
+}
+
+.hidden-project:nth-of-type(6){
+  transition-delay: 200ms;
+}
+
+.show{
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion){
+  .hidden{
+    transition: none;
+  }
+}
+
 h1 {
   font-size: 3em;
 }
