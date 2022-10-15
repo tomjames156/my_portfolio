@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-size: 3em;
 }
@@ -285,7 +289,7 @@ img.vouching {
 .image-container > div {
   position: relative;
 }
-.image-container > div > div {
+.image-container > div > div.project-name {
   position: absolute;
   left: -5px;
   top: -5px;
@@ -301,6 +305,20 @@ img.vouching {
 }
 .image-container > div img:hover {
   filter: blur(0);
+}
+.hide-project{
+  display: none;
+}
+.languages{
+  display: flex;
+  column-gap: 1rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+#more-projects{
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Contact Section */
@@ -377,6 +395,10 @@ footer p a:hover {
 }
 
 .hidden-project:nth-of-type(6){
+  transition-delay: 200ms;
+}
+
+.hidden-project:nth-of-type(8){
   transition-delay: 200ms;
 }
 
@@ -490,6 +512,10 @@ footer p a:hover {
   }
   
   .hidden-project:nth-of-type(6){
+    transition-delay: 0ms;
+  }
+
+  .hidden-project:nth-of-type(8){
     transition-delay: 0ms;
   }
 }

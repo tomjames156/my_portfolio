@@ -3,6 +3,8 @@ const myEmail = "tomjames156@gmail.com";
 const projects = document.querySelectorAll(".hidden-project");
 const stats = document.querySelectorAll(".stat-hidden");
 const validationSpace = document.getElementById("validation-result");
+const hiddenProjects = document.querySelectorAll(".hide-project");
+const projectsFormatter = document.getElementById("more-projects");
 
 // Send the Email
 function addEmail(subject, body){
@@ -20,6 +22,18 @@ function separateCharacters(sentence){
 
     return new_sentence;
 }
+
+projectsFormatter.addEventListener("click", () => {
+    for(let project of hiddenProjects){
+        if(project.classList.contains("hide-project")){
+            project.classList.remove("hide-project");
+            projectsFormatter.children[0].innerHTML = "Show Less";
+        }else{
+            project.classList.add("hide-project");
+            projectsFormatter.children[0].innerHTML = "Show More";
+        }
+    }
+});
 
 // Validate the email parameters before sending
 sendBtn.addEventListener('click', () =>{
@@ -73,4 +87,4 @@ const statsObserver = new IntersectionObserver((entries) => {
     })
 });
 
-stats.forEach(stat => statsObserver.observe(stat))
+stats.forEach(stat => statsObserver.observe(stat));
