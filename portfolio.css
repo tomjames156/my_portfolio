@@ -84,6 +84,7 @@ body {
 }
 .navbar a:hover {
   background: #16386B;
+  color: #ffad0a;
 }
 
 /* Content of the page*/
